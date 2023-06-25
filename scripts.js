@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll(".memory-card");
 const matchesSpan = document.querySelector(".matches");
 const movesSpan = document.querySelector(".moves");
+const modal = document.getElementById("game-over-modal");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -73,11 +74,22 @@ function restartGame() {
   moves = 0;
   matchesSpan.textContent = `Matches: ${matches}`;
   movesSpan.textContent = `Moves: ${moves}`;
+
+  closeModal();
 }
 
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
+}
+
+function showModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  restartGame();
 }
 
 (function shuffle() {

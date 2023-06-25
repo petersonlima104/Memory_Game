@@ -1,8 +1,12 @@
 const cards = document.querySelectorAll(".memory-card");
+const matchesSpan = document.querySelector(".matches");
+const movesSpan = document.querySelector(".moves");
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let matches = 0;
+let moves = 0;
 
 function flipCard() {
   if (lockBoard) return;
@@ -19,6 +23,8 @@ function flipCard() {
 
   // second click
   secondCard = this;
+  moves++;
+  movesSpan.textContent = `Moves: ${moves}`;
 
   checkForMatch();
 }
@@ -32,6 +38,13 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+
+  matches++;
+  matchesSpan.textContent = `Matches: ${matches}`;
+
+  if (matches === cards.length / 2) {
+    showModal();
+  }
 
   resetBoard();
 }
@@ -55,6 +68,11 @@ function restartGame() {
     let randomPos = Math.floor(Math.random() * 18);
     card.style.order = randomPos;
   });
+
+  matches = 0;
+  moves = 0;
+  matchesSpan.textContent = `Matches: ${matches}`;
+  movesSpan.textContent = `Moves: ${moves}`;
 }
 
 function resetBoard() {

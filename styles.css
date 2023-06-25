@@ -91,6 +91,14 @@ body {
   transform: rotateY(180deg);
 }
 
+.score {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 18px;
+}
+
 .reset-sec {
   position: absolute;
   bottom: -70px;

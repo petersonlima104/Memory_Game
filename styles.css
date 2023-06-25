@@ -90,3 +90,21 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
+
+.reset-sec {
+  position: absolute;
+  bottom: -70px;
+  left: 50%; /* Centralizar horizontalmente */
+  transform: translateX(-50%);
+}
+
+.butonreset {
+  align-content: center;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(to right, #ffc107, #ff9800);
+}
+
+.butonreset:hover {
+  background: linear-gradient(to right, #ff9800, #ffc107);
+}

@@ -47,6 +47,16 @@ function unflipCards() {
   }, 1500);
 }
 
+function restartGame() {
+  // Reembaralhar as cartas
+  cards.forEach((card) => {
+    card.classList.remove("flip");
+    card.addEventListener("click", flipCard);
+    let randomPos = Math.floor(Math.random() * 18);
+    card.style.order = randomPos;
+  });
+}
+
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];

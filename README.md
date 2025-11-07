@@ -1,3 +1,39 @@
-# Memory Game
+# 🧠 Jogo da Memória – Animado e Interativo
 
-#### Memory game is a classic card game that challenges your ability to remember and match pairs of cards. The object is to find all matching pairs by turning over two cards at a time. If the cards match, they remain face up. If not, they are flipped over again and you have to try again. The game continues until all pairs have been found. Test your memory and concentration skills in this fun and challenging game!
+Jogo da memória desenvolvido com animações suaves e contadores de tempo, movimentos e acertos. A cada início, as cartas são embaralhadas.
+
+---
+
+## ✅ Funcionalidades
+
+- Animação suave de virada das cartas.
+- Contagem de movimentos.
+- Contagem de acertos.
+- Cronômetro automático.
+- Embaralhamento a cada partida.
+- Modal de parabéns ao concluir o jogo.
+- Responsivo e visual elegante.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- HTML5  
+- CSS3 (transitions e transforms)  
+- JavaScript (DOM + lógica de jogo)
+
+---
+
+## 🧠 Desafios
+
+- Controle de estado das cartas.
+- Garantir fluidez nas animações.
+- Sorteio aleatório a cada partida (shuffle).
+
+---
+
+## ▶️ Execução
+
+Abra o arquivo `index.html`.
+
+---
